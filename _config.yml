@@ -27,7 +27,7 @@ twitter_username: C1200Games
 github_username:  C1200
 
 # Build settings
-theme: jekyll-theme-hacker
+theme: minima
 plugins:
   - jekyll-feed
 
