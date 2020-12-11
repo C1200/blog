@@ -25,7 +25,7 @@
         <small>{{ page.date | date: "%-d %B %Y" }}</small>
         <h1>{{ page.title }}</h1>
 
-        <p class="view">by <a href="/blog/user{{ page.author }}">{{ page.author | default: site.author }}</a></p>
+        <p class="view">by <a href="/blog/users/{{ page.author }}">{{ page.author | default: site.author }}</a></p>
 
         {{content}}
 

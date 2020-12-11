@@ -22,10 +22,21 @@
 
     <div class="container">
       <section id="main_content">
+        <h2>Posts</h2>
         <ul>
-          {% for post in site.posts %}
+          {% assign posts = site.posts | reverse %}
+          {% for post in posts %}
             <li>
               <a href="/blog{{ post.url }}">{{ post.title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+
+        <h2>Users</h2>
+        <ul>
+          {% for user in site.users %}
+            <li>
+              <a href="/blog{{ user.url }}">{{ user.username }}</a>
             </li>
           {% endfor %}
         </ul>
