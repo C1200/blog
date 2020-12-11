@@ -2,7 +2,7 @@
 layout: post
 categories: update
 
-title: ""
+title: "Ultimate Media Closures"
 author: UltimateMedia
 tags: ultimatemedia closure christmas
 
