@@ -23,15 +23,34 @@
     <div class="container">
       <section id="main_content">
         <h2>Posts</h2>
+        <ul class="pinned"></ul>
         <ul>
           {% assign posts = site.posts %}
           {% for post in posts %}
-            <li>
-              <a href="/blog{{ post.url }}">{{ post.title }}</a>
-              <small> by <a href="/blog/users/{{ post.author }}" style="color: white; text-decoration: none;">{{ post.author }}</a> &CenterDot; Posted on {{ post.date | date: "%b %d, %Y" }}</small>
-            </li>
+            {% if post.pin %}
+              <li class="pin">
+                <a href="/blog{{ post.url }}">{{ post.title }}</a>
+                <small> by <a href="/blog/users/{{ post.author }}" style="color: white; text-decoration: none;">{{ post.author }}</a> &CenterDot; Posted on {{ post.date | date: "%b %d, %Y" }} &CenterDot; Pinned</small>
+              </li>
+            {% else %}
+              <li>
+                <a href="/blog{{ post.url }}">{{ post.title }}</a>
+                <small> by <a href="/blog/users/{{ post.author }}" style="color: white; text-decoration: none;">{{ post.author }}</a> &CenterDot; Posted on {{ post.date | date: "%b %d, %Y" }}</small>
+              </li>
+            {% endif %}
           {% endfor %}
         </ul>
+
+        <script>
+          var pin = document.getElementsByClassName("pin")[0];
+          var pinhtml = pin.innerHTML;
+
+          pin.remove();
+
+          var newelem = document.createElement("li");
+          newelem.innerHTML = pinhtml;
+          document.getElementsByClassName("pinned")[0].appendChild(newelem);
+        </script>
 
         <h2>Users</h2>
         <ul>

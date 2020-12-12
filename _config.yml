@@ -30,6 +30,7 @@ github_username:  C1200
 theme: jekyll-theme-hacker
 plugins:
   - jekyll-feed
+  - jekyll-mentions
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -54,3 +55,5 @@ plugins:
 collections:
   users:
     output: true
+
+jekyll-mentions: https://c1200.js.org/blog/users/

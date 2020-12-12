@@ -15,7 +15,7 @@ Hello guys!
 
 Over the past few days I have been setting up this blog website.
 
-Here you can find updates with me and my company, [@UltimateMedia](/blog/users/UltimateMedia). I will attempt to post at least once a week.
+Here you can find updates with me and my company, @UltimateMedia. I will attempt to post at least once a week.
 
 Thanks for visiting!<br>
 Corey (C1200)

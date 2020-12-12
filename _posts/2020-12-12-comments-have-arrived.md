@@ -20,4 +20,4 @@ Comments have been added to the site. This means you can publicly share your fee
 Comment below with more updates that you want!
 
 Thanks for reading!<br>
-[@C1200](/blog/users/C1200)
+@C1200

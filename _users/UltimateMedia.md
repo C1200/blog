@@ -10,6 +10,6 @@ github: https://github.com/ultimatemediaorg
 email: 
 ---
 
-The small company in the UK. Founded by [@C1200](/blog/users/C1200).
+The small company in the UK. Founded by @C1200.
 
 <https://ultimatemedia.js.org>
