@@ -31,6 +31,7 @@ theme: jekyll-theme-hacker
 plugins:
   - jekyll-feed
   - jekyll-mentions
+  - jekyll-redirect-from
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -54,6 +55,8 @@ plugins:
 
 collections:
   users:
+    output: true
+  s:
     output: true
 
 jekyll-mentions: https://c1200.js.org/blog/users/

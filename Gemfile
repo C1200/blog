@@ -33,3 +33,5 @@ gem 'jekyll-theme-hacker', '~> 0.1.2'
 gem "jekyll-paginate"
 
 gem "jekyll-mentions"
+
+gem "jekyll-redirect-from"
