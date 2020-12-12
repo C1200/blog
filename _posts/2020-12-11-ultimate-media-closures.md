@@ -7,6 +7,8 @@ author: UltimateMedia
 tags: ultimatemedia closure christmas
 
 date: 2020-12-11 00:00:00 +0000
+
+comments: true
 ---
 
 Hello all!

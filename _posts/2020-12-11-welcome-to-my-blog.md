@@ -7,6 +7,8 @@ author: C1200
 tags: welcome blog c1200
 
 date: 2020-12-11 00:00:00 +0000
+
+comments: true
 ---
 
 Hello guys!
