@@ -28,6 +28,7 @@
           {% for post in posts %}
             <li>
               <a href="/blog{{ post.url }}">{{ post.title }}</a>
+              <small> by <a href="/blog/users/{{ post.author }}" style="color: white; text-decoration: none;">{{ post.author }}</a> &CenterDot; Posted on {{ post.date | date: "%b %d, %Y" }}</small>
             </li>
           {% endfor %}
         </ul>
