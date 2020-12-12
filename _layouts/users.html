@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <title>@{{ page.username }} | {{ site.title }}</title>
 
 {% seo %}
   </head>
@@ -47,6 +48,19 @@
         <br>
 
         {{ content }}
+
+        <br>
+        <h3>Posts by {{ page.username }}</h3>
+        <ul>
+          {% for post in site.posts %}
+            {% if post.author == page.username %}
+              <li>
+                <a href="/blog{{ post.url }}">{{ post.title }}</a>
+                <small> Posted on {{ post.date | date: "%b %d, %Y" }}</small>
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
       </section>
     </div>
 
