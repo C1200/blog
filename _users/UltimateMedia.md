@@ -1,6 +1,7 @@
 ---
 layout: users
 
+title: "@UltimateMedia"
 username: "UltimateMedia"
 
 youtube: https://www.youtube.com/channel/UC2MXjKFQU6tQkKTM0n0IGNQ

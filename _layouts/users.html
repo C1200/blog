@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     <title>@{{ page.username }} | {{ site.title }}</title>
 
-{% seo %}
+    {% seo %}
   </head>
 
   <body>
@@ -26,23 +26,23 @@
         <h1>{{ page.username }}</h1>
 
         {% if page.youtube %}
-            <a href="{{ page.youtube }}">YouTube</a>
+            <a href="{{ page.youtube }}" target="_blank">YouTube</a>
         {% endif %}
 
         {% if page.facebook %}
-            <a href="{{ page.facebook }}">Facebook</a>
+            <a href="{{ page.facebook }}" target="_blank">Facebook</a>
         {% endif %}
 
         {% if page.twitter %}
-            <a href="{{ page.twitter }}">Twitter</a>
+            <a href="{{ page.twitter }}" target="_blank">Twitter</a>
         {% endif %}
 
         {% if page.github %}
-            <a href="{{ page.github }}">Github</a>
+            <a href="{{ page.github }}" target="_blank">Github</a>
         {% endif %}
 
         {% if page.email %}
-            <a href="mailto:{{ page.email }}">Email</a>
+            <a href="mailto:{{ page.email }}" target="_blank">Email</a>
         {% endif %}
         
         <br>
