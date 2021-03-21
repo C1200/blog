@@ -9,8 +9,6 @@ tags: ultimatemedia closure christmas
 date: 2020-12-18 00:00:00 +0000
 
 comments: true
-
-pin: true
 ---
 
 Hello all!
