@@ -35,3 +35,5 @@ gem "jekyll-paginate"
 gem "jekyll-mentions"
 
 gem "jekyll-redirect-from"
+
+gem "github-pages", "~> 214", group: :jekyll_plugins

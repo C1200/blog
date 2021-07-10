@@ -1,74 +1,89 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link
+            rel="stylesheet"
+            href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}"
+        />
 
-{% seo %}
-  </head>
+        {% seo %}
+    </head>
 
-  <body>
+    <body>
+        <header>
+            <div class="container">
+                <a id="a-title" href="{{ '/' | relative_url }}">
+                    <h1>
+                        {{ site.title | default: site.github.repository_name }}
+                    </h1>
+                </a>
+                <h2>
+                    {{ site.description | default: site.github.project_tagline
+                    }}
+                </h2>
+            </div>
+        </header>
 
-    <header>
-      <div class="container">
-        <a id="a-title" href="{{ '/' | relative_url }}">
-          <h1>{{ site.title | default: site.github.repository_name }}</h1>
-        </a>
-        <h2>{{ site.description | default: site.github.project_tagline }}</h2>
-      </div>
-    </header>
+        <div class="container">
+            <section id="main_content">
+                <small>{{ page.date | date: "%-d %B %Y" }}</small>
+                <h1>{{ page.title }}</h1>
 
-    <div class="container">
-      <section id="main_content">
-        <small>{{ page.date | date: "%-d %B %Y" }}</small>
-        <h1>{{ page.title }}</h1>
+                <p class="view">
+                    by
+                    <a href="/blog/users/{{ page.author }}"
+                        >{{ page.author | default: site.author }}</a
+                    >
+                </p>
 
-        <p class="view">by <a href="/blog/users/{{ page.author }}">{{ page.author | default: site.author }}</a></p>
+                {{content}} {% if page.tags %}
+                <small
+                    >tags: <em>{{ page.tags | join: "</em> -
+                    <em>" }}</em></small
+                >
+                {% endif %} {% if page.comments %}
+                <script
+                    src="https://utteranc.es/client.js"
+                    repo="C1200/blog"
+                    issue-term="pathname"
+                    label="comment"
+                    theme="github-dark"
+                    crossorigin="anonymous"
+                    async
+                ></script>
+                {% else %}
+                <p>Comments have been disabled for this post.</p>
+                {% endif %}
+            </section>
+        </div>
 
-        {{content}}
-
-        {% if page.tags %}
-            <small>tags: <em>{{ page.tags | join: "</em> - <em>" }}</em></small>
+        {% if site.google_analytics %}
+        <script>
+            (function (i, s, o, g, r, a, m) {
+                i["GoogleAnalyticsObject"] = r;
+                (i[r] =
+                    i[r] ||
+                    function () {
+                        (i[r].q = i[r].q || []).push(arguments);
+                    }),
+                    (i[r].l = 1 * new Date());
+                (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m);
+            })(
+                window,
+                document,
+                "script",
+                "//www.google-analytics.com/analytics.js",
+                "ga"
+            );
+            ga("create", "{{ site.google_analytics }}", "auto");
+            ga("send", "pageview");
+        </script>
         {% endif %}
-
-        {% if page.comments %}
-          <div style="padding-top: 20px"></div>
-          <div id="disqus_thread"></div>
-          <script>
-              /**
-              *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-              *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-              /*
-              var disqus_config = function () {
-              this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-              this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-              };
-              */
-              (function() { // DON'T EDIT BELOW THIS LINE
-              var d = document, s = d.createElement('script');
-              s.src = 'https://c1200blog.disqus.com/embed.js';
-              s.setAttribute('data-timestamp', +new Date());
-              (d.head || d.body).appendChild(s);
-              })();
-          </script>
-          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-        {% else %}
-          <p>Comments have been disabled for this post.</p>
-        {% endif %}
-      </section>
-    </div>
-
-    {% if site.google_analytics %}
-    <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-        ga('create', '{{ site.google_analytics }}', 'auto');
-        ga('send', 'pageview');
-    </script>
-    {% endif %}
-</body>
+    </body>
 </html>
