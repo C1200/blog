@@ -38,3 +38,6 @@ and applications.
 **Will you be able to play games made by me on it?**<br />
 I might port my games over to Wiicreation at some point. They might
 even be launch titles!
+
+**Will it be open source?**<br />
+Yes!
