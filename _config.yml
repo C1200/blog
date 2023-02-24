@@ -20,7 +20,7 @@
 
 title: C1200 Blog
 email: coreyw.ultimatemedia@gmail.com
-description: "Welcome to my blog! Here you can find updates on me and my company!"
+description: "I make things!"
 baseurl: "/blog" # the subpath of your site, e.g. /blog
 url: "https://C1200.js.org" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: C1200Games
