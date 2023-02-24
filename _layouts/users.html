@@ -45,6 +45,10 @@
             <a href="mailto:{{ page.email }}" target="_blank">Email</a>
         {% endif %}
         
+        {% if page.other %}
+            <a href="{{ page.other }}" target="_blank">Other</a>
+        {% endif %}
+        
         <br>
 
         {{ content }}
