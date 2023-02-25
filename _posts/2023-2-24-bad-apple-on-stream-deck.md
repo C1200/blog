@@ -18,4 +18,4 @@ drawing the video to a HTML `<canvas>` and using the Stream Deck setImage functi
 After that I made it work with YouTube and Spotify using their embeds. Finally, I added progress
 bars by using `CanvasRenderingContext2D.fillRect`.
 
-[Watch the video](https://youtu.be/W1XYDhrImqI)
+[Watch the video](https://youtu.be/W1XYDhrImqI) &bull; [Code](https://github.com/c1200/videobuttons)
